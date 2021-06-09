@@ -1,0 +1,15 @@
+// Initialization
+n0 <- source node;
+OPEN <- OPEN U {n0};
+CLOSED <- Ø;
+// Execution
+while( OPEN is not Ø) {
+    n <- OPEN;
+    if (n is the target node)
+       return SUCESS;
+    CLOSED <- n;
+    M <- child nodes of n;
+    OPEN <- OPEN U M;
+    sort OPEN according to f^;
+}
+return FAIL;
